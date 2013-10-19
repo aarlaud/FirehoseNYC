@@ -8,7 +8,9 @@ class PicsController < ApplicationController
 	end
 
 	def create
-		@pic = Pic.create(params[:pic])
+		if params[:submit]
+			@pic = Pic.create(params[:pic])
+		end
 		redirect_to pics_path
 	end
 

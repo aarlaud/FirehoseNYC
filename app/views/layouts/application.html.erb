@@ -20,14 +20,16 @@
 		    </a>
 		     
 		    <!-- Be sure to leave the brand out there if you want it shown -->
-		    <a class="brand" href="#">Firehose NYC</a>
-		     
+		    <%= link_to 'Firehose NYC', root_path, :class => "brand" %> 
 		    <!-- Everything you want hidden at 940px or less, place within here -->
 		    <div class="nav-collapse collapse">
 
 		    <ul class="nav">
 		    	<li>
-		    		<%= link_to 'My App', '#' %>
+		    		<%= link_to 'Pictures App', pics_path %>
+		    	</li>
+		    	<li>
+		    		<%= link_to 'New Picture', new_pic_path %>
 		    	</li>
 		    	<li>
 		    		<%= link_to 'My Company', 'http://www.akamai.com', :target => "_new" , :confirm => "Leaving already?" %>
