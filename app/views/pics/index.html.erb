@@ -1,9 +1,11 @@
-<h2>These are my pictures</h2>
+
+<h2 class="custom-fonts text-center titlebox">These are my pictures</h2>
 
 <% @pics.each do |pic| %>
+<div class="boxy span3">
 	<div>
 		<h2>
-			Hour <%= pic.hour %>
+			Hour # <%= pic.hour %>
 		</h2>
 		<p>
 			<%= pic.emotion %>
@@ -13,6 +15,7 @@
 			<%= pic.learned %>
 		</p>
 	</div>
+</div>
 
 <% end %>
 

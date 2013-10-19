@@ -5,6 +5,10 @@ body{
   -o-background-size: cover;
   background-size: cover;
   color: #fff;
+
+  font-family: Tahoma, Arial, sans-serif;
+  
+  font-weight: 100;
 }
 
 .custom-font{
@@ -20,3 +24,10 @@ body{
 	}
 }
 
+.titlebox{
+ 	margin: 0 auto;
+ 	box-shadow: 2px -2px 2px 2px rgba(36, 32, 33, 0.5);
+	background-color: rgba(36, 32, 33, 0.5);
+	padding: 1%;
+	width: 300px;
+}

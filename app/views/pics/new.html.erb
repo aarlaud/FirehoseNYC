@@ -1,15 +1,14 @@
+<div class="span6 offset3 text-center boxy">
 
+	<h2 class="custom-font">Upload your stuff</h2>
 
-<h2>Upload your stuff</h2>
+	<%= simple_form_for @pic do |f|  %>
+		<%= f.input :hour, :label => 'Required', :required => 'true', :placeholder => 'Which hour' %>
+		<%= f.input :emotion, :label => 'How did you feel?', :required => 'true', :placeholder => 'Happy?' %>
+		<%= f.input :learned, :label => 'What did you learned?', :input_html => {rows: '5'} %>
 
-<%= simple_form_for @pic do |f|  %>
-<%= f.input :hour %>
-<%= f.input :emotion %>
-<%= f.input :learned %>
-
-<%= submit_tag 'Submit' %>
-<%= submit_tag 'Cancel' %>
-
-<% end %>
-
+		<br />
+		<%= submit_tag 'Submit', :class => "btn btn-success" %>
+	<% end %>
+</div>
 
