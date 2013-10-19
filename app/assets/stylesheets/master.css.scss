@@ -8,4 +8,13 @@ body{
 
 .custom-font{
 	color: #fff;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+@media screen and (max-width: 500px){
+	.custom-font{
+		font-size: 10px;
+		line-height: 10px;
+	}
 }
