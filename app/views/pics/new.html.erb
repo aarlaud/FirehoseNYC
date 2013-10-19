@@ -4,7 +4,11 @@
 
 	<%= simple_form_for @pic do |f|  %>
 		<%= f.input :hour, :label => 'Required', :required => 'true', :placeholder => 'Which hour' %>
+
+		<%= f.input :image, :as => :file %>
+		
 		<%= f.input :emotion, :label => 'How did you feel?', :required => 'true', :placeholder => 'Happy?' %>
+		
 		<%= f.input :learned, :label => 'What did you learned?', :input_html => {rows: '5'} %>
 
 		<br />
