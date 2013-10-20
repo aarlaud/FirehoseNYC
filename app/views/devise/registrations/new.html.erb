@@ -1,0 +1,24 @@
+<div class="boxy span6 offset3 text-center custom-font">
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, :label => 'Enter email', :required => true, :autofocus => true %>
+    <%= f.input :password, :label => 'Enter Password', :required => true %>
+    <%= f.input :password_confirmation, :label => 'Confirm Password', :required => true %>
+  </div>
+
+  <br />
+	<%= f.button :submit, "Sign up", :class => "btn btn-success btn-large" %>
+  
+<% end %>
+<div class="btn btn-link">
+	<%= render "devise/shared/links" %>
+</div>
+
+</div>
+
+
+

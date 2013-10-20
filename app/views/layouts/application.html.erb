@@ -28,19 +28,51 @@
 		    	<li>
 		    		<%= link_to 'Pictures App', pics_path %>
 		    	</li>
+
+		    	<!-- Display upload link only from Picture app -->
+		    	<% if current_page?(pics_path) %>
 		    	<li>
 		    		<%= link_to raw('<i class="icon-plus"></i> Picture'), new_pic_path %>
 		    	</li>
+		    	<% end %>
+
 		    	<li>
 		    		<%= link_to 'My Company', 'http://www.akamai.com', :target => "_new" , :confirm => "Leaving already?" %>
 		    	</li>
 			</ul>
+
+			<ul class="nav pull-right">
+				<% if user_signed_in? %>
+				<li>
+					<%= link_to current_user.email, edit_user_registration_path %>
+				</li>
+				<li>
+					<%= link_to 'Sign Out', destroy_user_session_path, :method => 'delete' %>
+				</li>
+				<% else %>
+				<li>
+					<%= link_to 'Sign Up', new_user_registration_path %>
+				</li>
+				<li>
+					<%= link_to 'Sign In', new_user_session_path %>
+				</li>
+				<% end %>
+			</ul>
+
 		    </div>
 		     
 		    </div>
 	    </div>
 </div>
 </nav>
+
+<!-- Devise notice and alert section -->
+<% if notice.present? %>
+	<p class="notice label label-info pull-right"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+	<p class="alert"><%= alert %></p>
+<% end %>	
 
 <%= yield %>
 
