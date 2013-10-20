@@ -1,0 +1,27 @@
+
+<% if @pic.user.present? %>
+	<h2 class="custom-fonts text-center titlebox">Picture posted by <%= @pic.user.email %></h2>
+<% end %>
+<div class="container">
+	
+		
+		<div class="boxy text-center">
+			
+				<h2>
+					Hour # <%= @pic.hour %>
+				</h2>
+
+				<!-- Wrapping image with image_tag -->
+				<p>
+					<%= image_tag @pic.image.to_s %>
+				</p>
+				<p>
+					<%= @pic.emotion %>
+				</p>
+				<p>
+					I learned that
+					<%= @pic.learned %>
+				</p>
+		</div>
+
+</div>

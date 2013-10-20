@@ -16,4 +16,8 @@ class PicsController < ApplicationController
 		redirect_to pics_path
 	end
 
+	def show
+		@pic = Pic.find(params[:id])
+	end
+
 end

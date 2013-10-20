@@ -1,31 +1,36 @@
 
 <h2 class="custom-fonts text-center titlebox">These are my pictures</h2>
 
-<% @pics.each do |pic| %>
-<div class="boxy span3">
-	<div>
-		<h2>
-			Hour # <%= pic.hour %>
-		</h2>
+<div class="container">
+	<div class="row">
+		<% @pics.each do |pic| %>
+		<div class="boxy span3">
+			<div>
+				<h2>
+					Hour # <%= pic.hour %>
+				</h2>
 
-		<!-- Wrapping image with image_tag -->
-		<p>
-			<%= image_tag pic.image.to_s %>
-		</p>
-		<p>
-			<%= pic.emotion %>
-		</p>
-		<p>
-			I learned that
-			<%= pic.learned %>
-		</p>
-		<% if pic.user.present? %>
-		<p>
-			<strong>Posted by :</strong> <%= pic.user.email %>
-		</p>
+				<!-- Wrapping image with image_tag -->
+				<p>
+					<%= link_to pic_path(pic) do %>
+						<%= image_tag pic.image.to_s %>
+					<% end %>
+				</p>
+				<p>
+					<%= pic.emotion %>
+				</p>
+				<p>
+					I learned that
+					<%= pic.learned %>
+				</p>
+				<% if pic.user.present? %>
+				<p>
+					<strong>Posted by :</strong> <%= pic.user.email %>
+				</p>
+				<% end %>
+			</div>
+		</div>
+
 		<% end %>
 	</div>
 </div>
-
-<% end %>
-
