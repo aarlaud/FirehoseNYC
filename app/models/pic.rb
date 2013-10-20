@@ -3,5 +3,8 @@ class Pic < ActiveRecord::Base
   
   # Adding carrierwave uploader
   	mount_uploader :image, ImageUploader
+
+	# Watch out - user is singular !
+  	belongs_to :user
   	
 end

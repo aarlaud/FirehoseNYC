@@ -19,6 +19,11 @@
 			I learned that
 			<%= pic.learned %>
 		</p>
+		<% if pic.user.present? %>
+		<p>
+			<strong>Posted by :</strong> <%= pic.user.email %>
+		</p>
+		<% end %>
 	</div>
 </div>
 
