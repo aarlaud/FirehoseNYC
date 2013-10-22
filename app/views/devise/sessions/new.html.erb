@@ -1,4 +1,4 @@
-<div class="boxy span6 offset3 text-center custom-font">
+<div class="boxy span6 offset3 text-center">
 <h2>Sign in</h2>
 
 <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -15,9 +15,9 @@
   
 <% end %>
 
-<div class="btn btn-link">
-	<%= render "devise/shared/links" %>
-</div>
+
+<%= render "devise/shared/links" %>
+
 
 </div>
 	
