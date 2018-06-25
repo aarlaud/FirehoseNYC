@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.14'
+gem 'rails', '5.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -11,23 +11,23 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails', '~> 5.0.5'
 
   # gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 2.7.2'
 end
 
-gem 'jquery-rails'
-gem "twitter-bootstrap-rails"
-gem "simple_form"
-gem "carrierwave"
-gem "fog", "~> 1.3.1"
+gem 'jquery-rails', '>= 4.0.1'
+gem "twitter-bootstrap-rails", ">= 3.2.0"
+gem "simple_form", ">= 3.0.2"
+gem "carrierwave", ">= 1.0.0"
+gem "fog", "~> 1.14.0"
 
-gem 'devise'
+gem 'devise', '>= 4.0.0'
 
 
 # To use ActiveModel has_secure_password
